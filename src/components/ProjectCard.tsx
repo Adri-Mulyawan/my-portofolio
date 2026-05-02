@@ -9,11 +9,17 @@ const ProjectCard = ({ project }: ProjectCardProps) => {
   return (
     <article className="group overflow-hidden rounded-[2rem] border border-[var(--border)] bg-[var(--surface-solid)] shadow-sm transition hover:-translate-y-1 hover:shadow-md">
       <div className="relative flex h-56 items-center justify-center overflow-hidden bg-[var(--chip)]">
-        
-        <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl bg-[var(--surface-solid)] text-6xl shadow-sm">
-          {project.image}
-        </div>
-
+        {project.image.includes("/") || project.image.startsWith("data:") ? (
+          <img
+            src={project.image}
+            alt={project.title}
+            className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="relative flex h-24 w-24 items-center justify-center rounded-2xl bg-[var(--surface-solid)] text-6xl shadow-sm">
+            {project.image}
+          </div>
+        )}
         {project.featured ? (
           <span className="absolute left-5 top-5 rounded-full bg-white px-4 py-2 text-xs font-black text-slate-950 shadow-lg">
             Featured Project

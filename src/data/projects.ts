@@ -1,12 +1,12 @@
 import type { Project } from "../types/project";
-
+import dimsumImage from "../assets/projects/dimsum-home.png";
 export const projects: Project[] = [
   {
     title: "Dimsum Imono",
     category: "Food Ordering Website",
     description:
       "Website pemesanan makanan dengan cart, checkout WhatsApp, admin dashboard, dan pesanan realtime menggunakan Firebase Firestore.",
-    image: "🥟",
+    image: dimsumImage,
     tags: ["React", "Firebase", "Tailwind", "Vercel", "WhatsApp"],
     liveUrl: "https://dimsum-imono.vercel.app/",
     githubUrl: "https://github.com/Adri-Mulyawan/dimsum-imono",
