@@ -1,5 +1,6 @@
 import type { Project } from "../types/project";
 import dimsumImage from "../assets/projects/dimsum-home.png";
+import heroImage from "../assets/hero.png";
 export const projects: Project[] = [
   {
     title: "Dimsum Imono",
@@ -17,9 +18,9 @@ export const projects: Project[] = [
     category: "Personal Website",
     description:
       "Website portofolio pribadi berbasis React TypeScript untuk menampilkan skill, project, dan kontak profesional.",
-    image: "🧑‍💻",
+    image: heroImage,
     tags: ["TypeScript", "React", "Tailwind", "Framer Motion"],
-    liveUrl: "#",
-    githubUrl: "#",
+    liveUrl: "https://adri-mulyawan-porto.vercel.app/",
+    githubUrl: "https://github.com/Adri-Mulyawan/my-portofolio",
   },
 ];
